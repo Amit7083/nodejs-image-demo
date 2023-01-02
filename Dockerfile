@@ -6,6 +6,10 @@ WORKDIR /home/node/app
 
 COPY package*.json ./
 
+Env http_proxy=http://10.130.162.10:8080
+
+Env https_proxy=http://10.130.162.10:8080
+
 USER node
 
 RUN npm install
